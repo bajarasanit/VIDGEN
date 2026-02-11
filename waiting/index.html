@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDGEN Suite — Video Generator + Bonus AI Modules</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            main: '#050810',
+            card: '#0e1324',
+            accent: '#38bdf8',
+            primary: '#3b82f6',
+            line: '#1f2937'
+          },
+          boxShadow: {
+            glow: '0 0 25px rgba(59, 130, 246, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body{background:#050810;color:#fff}
+    .grid-bg{background-image:radial-gradient(rgba(56,189,248,.10) 1px, transparent 1px);background-size:28px 28px}
+    .glass{background:rgba(14,19,36,.70);backdrop-filter:blur(10px)}
+    .text-grad{background:linear-gradient(90deg,#38bdf8,#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-50 border-b border-slate-900/60 bg-main/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-sky-500/15 border border-sky-500/25 flex items-center justify-center">
+          <i class="fa-solid fa-bolt text-sky-400"></i>
+        </div>
+        <div>
+          <div class="font-extrabold tracking-wide">VIDGEN <span class="text-sky-400">Suite</span></div>
+          <div class="text-[10px] text-slate-400 -mt-0.5">Desktop video generator + bonus AI modules (beta)</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs text-slate-300">
+        <a class="hover:text-white" href="#fitur">Fitur</a>
+        <a class="hover:text-white" href="#bonus">Bonus</a>
+        <a class="hover:text-white" href="#cara-kerja">Cara Kerja</a>
+        <a class="hover:text-white" href="#waitinglist">Waiting List</a>
+      </nav>
+
+      <a href="https://chat.whatsapp.com/Fu8sjkEIEtVHqwKRF8V0lI" target="_blank"
+         class="text-xs font-bold bg-emerald-500 hover:bg-emerald-600 transition-colors px-4 py-2 rounded-full shadow-glow">
+        Join Waitinglist
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-[110px] bg-blue-700/20"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-800 bg-slate-900/60 glass mb-6">
+          <span class="text-amber-400 text-xs"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <span class="text-[11px] sm:text-xs font-medium text-slate-300 tracking-wide">Hasilkan puluhan–ratusan video promosi unik dari footage yang sama • sekali klik</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.12] tracking-tight">
+          Bikin <span class="text-grad">Banyak Video Berbeda</span><br class="hidden md:block" />
+          dari 1 Footage — <span class="text-grad">Tanpa Edit Satu-Satu</span>
+        </h1>
+
+        <p class="mt-5 text-slate-400 text-sm sm:text-base max-w-2xl leading-relaxed">
+          <b class="text-slate-200">VIDGEN</b> adalah tools desktop ringan (offline) untuk creator & affiliate.
+          Fokusnya 1 hal: <b class="text-slate-200">scale produksi video</b> tanpa duplikat.
+          Dan kamu juga dapat <b class="text-slate-200">bonus AI modules</b> (beta) buat naikin conversion.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#waitinglist"
+             class="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-extrabold py-3 px-8 rounded-full text-sm shadow-glow">
+            <i class="fa-brands fa-whatsapp"></i>
+            JOIN WAITINGLIST
+          </a>
+          <a href="#cara-kerja"
+             class="inline-flex items-center justify-center gap-2 border border-slate-800 hover:border-slate-700 bg-slate-900/40 glass text-slate-200 font-bold py-3 px-8 rounded-full text-sm">
+            <i class="fa-solid fa-circle-play"></i>
+            Lihat Cara Kerja
+          </a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl">
+          <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass">
+            <div class="text-sky-400"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="mt-2 text-xs font-bold">Batch Generate</div>
+            <div class="text-[11px] text-slate-400 mt-1">Masuk banyak audio, klik sekali.</div>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass">
+            <div class="text-amber-400"><i class="fa-solid fa-shuffle"></i></div>
+            <div class="mt-2 text-xs font-bold">Anti Duplikat</div>
+            <div class="text-[11px] text-slate-400 mt-1">Urutan footage diacak otomatis.</div>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass">
+            <div class="text-green-400"><i class="fa-solid fa-laptop"></i></div>
+            <div class="mt-2 text-xs font-bold">Offline Desktop</div>
+            <div class="text-[11px] text-slate-400 mt-1">Jalan di PC user, bukan cloud.</div>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass">
+            <div class="text-purple-400"><i class="fa-solid fa-gift"></i></div>
+            <div class="mt-2 text-xs font-bold">Bonus AI (Beta)</div>
+            <div class="text-[11px] text-slate-400 mt-1">Script, VO, foto, review, try-on.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Video -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900/40 glass text-[11px] text-slate-300">
+        <i class="fa-solid fa-circle-play text-sky-400"></i>
+        <span>Demo & Walkthrough Resmi</span>
+      </div>
+      <h2 class="mt-4 text-2xl md:text-3xl font-extrabold">Lihat Langsung Cara Kerjanya (Biar Nggak Beli Kucing dalam Karung 😄)</h2>
+      <p class="text-slate-400 text-sm mt-2">Video ini nunjukin alur asli: dari input → generate → output. No gimmick.</p>
+    </div>
+
+    <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-black shadow-glow">
+      <div class="aspect-video">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/FT3RIl1MaVU?si=ulKkIQ5ZfVv5fNMg"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass text-xs text-slate-300">
+        <b class="text-slate-200">Apa yang ditunjukin:</b> Batch generate video dari folder audio & footage.
+      </div>
+      <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass text-xs text-slate-300">
+        <b class="text-slate-200">Bonus dibedah:</b> TikTok Viral Generator, VO massal, Storyboard, Try-On.
+      </div>
+      <div class="p-4 rounded-xl border border-slate-800 bg-card/70 glass text-xs text-slate-300">
+        <b class="text-slate-200">Output real:</b> Contoh video hasil generate (anti duplikat).
+      </div>
+    </div>
+  </section>
+
+  <!-- Waiting List CTA (FULL SECTION) -->
+  <section id="waitinglist" class="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-[110px] bg-emerald-600/20"></div>
+
+    <div class="relative rounded-3xl border border-emerald-500/25 bg-card/70 glass p-7 sm:p-10 shadow-glow">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 text-emerald-200 text-[11px] mb-4">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span><b>WAITINGLIST (GRATIS)</b> — via WhatsApp Channel</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">
+            Join sekarang biar dapet <span class="text-grad">update & promo launch</span> duluan
+          </h2>
+
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Kamu bakal dapet: update fitur, contoh hasil video, tutorial batch, dan info early-bird.
+            Nggak spam — cuma yang penting + value konten.
+          </p>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-4 rounded-2xl border border-slate-800 bg-slate-900/35 glass">
+              <div class="text-emerald-300 text-lg"><i class="fa-solid fa-bolt"></i></div>
+              <div class="mt-2 text-xs font-extrabold">Early Info</div>
+              <div class="text-[11px] text-slate-400 mt-1">Update release & roadmap.</div>
+            </div>
+            <div class="p-4 rounded-2xl border border-slate-800 bg-slate-900/35 glass">
+              <div class="text-emerald-300 text-lg"><i class="fa-solid fa-tag"></i></div>
+              <div class="mt-2 text-xs font-extrabold">Promo Launch</div>
+              <div class="text-[11px] text-slate-400 mt-1">Diskon & bonus khusus.</div>
+            </div>
+            <div class="p-4 rounded-2xl border border-slate-800 bg-slate-900/35 glass">
+              <div class="text-emerald-300 text-lg"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="mt-2 text-xs font-extrabold">Tutorial</div>
+              <div class="text-[11px] text-slate-400 mt-1">Workflow & contoh real.</div>
+            </div>
+          </div>
+
+          <div class="mt-6 text-[11px] text-slate-500">
+            <i class="fa-solid fa-shield"></i>
+            <span class="ml-1">Tips: setelah join, aktifkan notif di tab <b class="text-slate-300">Updates</b>.</span>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[360px]">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/35 glass p-5">
+            <div class="text-sm font-extrabold">Masuk WAITINGLIST sekarang</div>
+            <div class="text-[11px] text-slate-400 mt-1">1 klik → langsung ke WhatsApp Channel</div>
+
+            <a href="https://chat.whatsapp.com/Fu8sjkEIEtVHqwKRF8V0lI" target="_blank"
+               class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-extrabold py-3 rounded-full text-sm shadow-glow">
+              <i class="fa-brands fa-whatsapp"></i>
+              JOIN WAITINGLIST
+            </a>
+
+            <div class="mt-3 flex items-center justify-between text-[11px] text-slate-400">
+              <span><i class="fa-solid fa-circle-check text-emerald-400"></i> Gratis</span>
+              <span><i class="fa-solid fa-clock text-emerald-400"></i> 10 detik</span>
+              <span><i class="fa-solid fa-lock text-emerald-400"></i> Aman</span>
+            </div>
+
+            <div class="mt-4 text-[11px] text-slate-500 leading-relaxed">
+              Join sekarang biar nggak ketinggalan info launch + update fitur terbaru.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Kenapa Banyak Affiliate Mentok?</h2>
+      <p class="text-slate-400 text-sm mt-2">Bukan karena kurang niat — tapi karena workflow masih manual.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 bg-red-500/10 border border-red-500/20">
+          <i class="fa-solid fa-ban text-red-400"></i>
+        </div>
+        <div class="text-lg font-extrabold text-red-300">Konten Terlihat Sama</div>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Footage sama + urutan sama → konten duplikat, susah testing, gampang drop perform.</p>
+      </div>
+
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 bg-amber-500/10 border border-amber-500/20">
+          <i class="fa-solid fa-hourglass-half text-amber-400"></i>
+        </div>
+        <div class="text-lg font-extrabold text-amber-300">Edit Manual Capek</div>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Ganti audio, potong, gabung, render satu-satu bikin kamu habis energi sebelum upload.</p>
+      </div>
+
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4 bg-sky-500/10 border border-sky-500/20">
+          <i class="fa-solid fa-chart-line text-sky-400"></i>
+        </div>
+        <div class="text-lg font-extrabold text-sky-300">Susah Scale</div>
+        <p class="text-slate-400 text-xs mt-2 leading-relaxed">Affiliate menang di volume. Kalau produksinya lambat, kamu kalah sama yang sistemnya brutal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features -->
+  <section id="fitur" class="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Fitur Utama VIDGEN (Desktop)</h2>
+      <p class="text-slate-400 text-sm mt-2">Fokus ke output: banyak video unik dari 1 footage.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-folder-open"></i></div>
+        <div class="font-extrabold">Gabung Banyak Footage</div>
+        <p class="text-slate-400 text-xs mt-2">Masukkan folder footage, sistem gabung otomatis jadi stok video.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-amber-400 text-xl mb-3"><i class="fa-solid fa-shuffle"></i></div>
+        <div class="font-extrabold">Urutan Diacak</div>
+        <p class="text-slate-400 text-xs mt-2">Setiap generate, urutan klip berubah supaya hasil tidak kembar.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-slate-200 text-xl mb-3"><i class="fa-solid fa-microphone"></i></div>
+        <div class="font-extrabold">1 Audio = 1 Video</div>
+        <p class="text-slate-400 text-xs mt-2">Masukkan banyak audio. Setiap audio otomatis dibuatkan video unik.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-red-400 text-xl mb-3"><i class="fa-solid fa-volume-xmark"></i></div>
+        <div class="font-extrabold">Audio Asli Dihapus</div>
+        <p class="text-slate-400 text-xs mt-2">Video hanya pakai audio narasi (lebih rapi untuk affiliate).</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-sky-400 text-xl mb-3"><i class="fa-solid fa-gears"></i></div>
+        <div class="font-extrabold">Batch Sekali Jalan</div>
+        <p class="text-slate-400 text-xs mt-2">Klik sekali, render otomatis sesuai jumlah audio yang kamu input.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="text-green-400 text-xl mb-3"><i class="fa-solid fa-desktop"></i></div>
+        <div class="font-extrabold">Offline & Ringan</div>
+        <p class="text-slate-400 text-xs mt-2">Berjalan di PC Windows user. Tidak tergantung server kamu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonus Modules -->
+  <section id="bonus" class="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-sky-500/25 bg-sky-500/10 text-sky-200 text-[11px] mb-4">
+        <i class="fa-solid fa-gift"></i>
+        <span><b>Bonus Power Pack</b> — 4 AI Apps di dalam dashboard</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-extrabold">Bonus AI Modules yang Beneran “Wah” (Gratis)</h2>
+      <p class="text-slate-400 text-sm mt-2">Biar VIDGEN makin brutal: dari <b class="text-slate-200">ide → skrip → VO → visual</b> siap posting. Ini bonus, tapi power-nya setara produk terpisah.</p>
+
+      <div class="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div class="px-4 py-2 rounded-xl border border-slate-800 bg-slate-900/35 glass text-[11px] text-slate-300">
+          <b class="text-slate-200">Value bonus (estimasi):</b> Rp 4.500.000+
+        </div>
+        <div class="px-4 py-2 rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-200 text-[11px]">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span><b>Catatan:</b> Bonus AI bersifat beta/eksperimental & bisa berubah mengikuti layanan pihak ketiga.</span>
+        </div>
+      </div>
+
+      <div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-3">
+        <div class="p-4 rounded-2xl border border-slate-800 bg-card/70 glass">
+          <div class="text-sky-400"><i class="fa-solid fa-fire"></i></div>
+          <div class="mt-2 text-xs font-extrabold">12+ Hook Psikologis</div>
+          <div class="text-[11px] text-slate-400 mt-1">Multi-select → banyak naskah sekaligus.</div>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-800 bg-card/70 glass">
+          <div class="text-purple-400"><i class="fa-solid fa-wave-square"></i></div>
+          <div class="mt-2 text-xs font-extrabold">VO Massal Kombinasi</div>
+          <div class="text-[11px] text-slate-400 mt-1">Naskah×Suara×Style → auto jadi ZIP.</div>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-800 bg-card/70 glass">
+          <div class="text-green-400"><i class="fa-solid fa-clapperboard"></i></div>
+          <div class="mt-2 text-xs font-extrabold">Storyboard Otomatis</div>
+          <div class="text-[11px] text-slate-400 mt-1">Scene 1–N: unboxing → verdict.</div>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-800 bg-card/70 glass">
+          <div class="text-amber-400"><i class="fa-solid fa-camera-retro"></i></div>
+          <div class="mt-2 text-xs font-extrabold">Foto Produk Pro</div>
+          <div class="text-[11px] text-slate-400 mt-1">Style, background, model, ratio siap sosmed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- TikTok Viral Content Generator -->
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <div class="text-sky-300 font-extrabold text-lg">TikTok Viral Content Generator</div>
+              <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=30s" target="_blank"
+                 class="text-xs px-2 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-300 hover:bg-sky-500/20">
+                <i class="fa-solid fa-play"></i> Demo
+              </a>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1">Analisis produk → hook → script → VO massal → download</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+        </div>
+        <div class="mt-4 p-4 rounded-xl border border-slate-800 bg-slate-900/30 glass text-[11px] text-slate-300">
+          <b class="text-slate-200">Killer use-case:</b> bikin 8 naskah + 12 audio VO dalam sekali generate → masukin ke VIDGEN → jadi 12 video unik.
+        </div>
+        <ul class="mt-5 space-y-2 text-xs text-slate-300">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> AI product analyzer (foto/teks) → nama, kategori, pain point, benefit, target, tone</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> 12+ tipe hook (FOMO, Pain, Before-After, Controversial, ASMR, dll) + multi-select</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> Script full (Hook–Body–CTA) per hook + bisa edit manual</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> Advanced VO: gender grouping + multi voice + multi style (Qori/Whisper/Excited/News/Storyteller, dll)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> Batch: <b class="text-slate-200">Naskah×Suara×Style</b> → auto generate + bulk download ZIP</li>
+        </ul>
+      </div>
+
+      <!-- Product Review Generator -->
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <div class="text-green-300 font-extrabold text-lg">Product Review Generator</div>
+              <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=180s" target="_blank"
+                 class="text-xs px-2 py-1 rounded-md bg-green-500/10 border border-green-500/20 text-green-300 hover:bg-green-500/20">
+                <i class="fa-solid fa-play"></i> Demo
+              </a>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1">Storyboard review yang rapi — bukan gambar acak</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center text-green-400">
+            <i class="fa-solid fa-clapperboard"></i>
+          </div>
+        </div>
+        <ul class="mt-5 space-y-2 text-xs text-slate-300">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> Multi-upload foto produk + tombol <b class="text-slate-200">AI Generate Deskripsi</b> (marketing ID)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> Integrasi foto model (personalisasi) → seolah model pakai produk</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> Smart cropping: 1:1, 3:4, 9:16, 16:9 (auto-crop presisi)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> Storyboard otomatis: unboxing → detail → pemakaian → verdict</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> Per scene: preview, edit prompt, regenerate, caption generator, download</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-green-400 mt-0.5"></i> <b class="text-slate-200">Video Prompt</b> siap copy ke Runway/Sora/Kling untuk animasi</li>
+        </ul>
+      </div>
+
+      <!-- Virtual Try-On Pro -->
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <div class="text-purple-300 font-extrabold text-lg">Virtual Try-On Pro</div>
+              <a href="https://www.youtube.com/watch?v=k7ApmoIhluM" target="_blank"
+                 class="text-xs px-2 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20">
+                <i class="fa-solid fa-play"></i> Demo
+              </a>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1">Bikin katalog fashion dipakai model tanpa photoshoot</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+        </div>
+        <ul class="mt-5 space-y-2 text-xs text-slate-300">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> Dual upload: produk & model • drag & drop • dukung HEIC (iPhone)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> Angle preset (front/side/back/3/4/top/close/full) + custom angle</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> Bulk 4/8/12 foto + grid hasil + preview modal</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> Download satuan / download semua</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> Auto-retry (exponential backoff) + progress bar (lebih stabil)</li>
+        </ul>
+      </div>
+
+      <!-- Foto Produk Affiliate -->
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <div class="text-amber-300 font-extrabold text-lg">Foto Produk Affiliate (Studio Virtual)</div>
+              <a href="https://www.youtube.com/watch?v=k7ApmoIhluM" target="_blank"
+                 class="text-xs px-2 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-300 hover:bg-amber-500/20">
+                <i class="fa-solid fa-play"></i> Demo
+              </a>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1">Foto produk estetik + realistis tanpa studio & fotografer</div>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-camera-retro"></i>
+          </div>
+        </div>
+        <ul class="mt-5 space-y-2 text-xs text-slate-300">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> Multi-upload produk (berbagai sudut) → hasil konsisten</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> Tombol <b class="text-slate-200">✨ Buat Deskripsi</b> (persuasif, SEO-friendly, ID, max 500 char)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> Virtual model + custom background (lighting & shadow menyatu)</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> 12+ style preset (Minimalis/Studio/Dark/Luxury) + custom style prompt</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> Batch 7/14/20 variasi (angle & komposisi beda) + download semua</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-amber-400 mt-0.5"></i> Dual-stage AI: strategi prompt → eksekusi visual + smart queueing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="cara-kerja" class="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Cara Kerja VIDGEN (3 Langkah)</h2>
+      <p class="text-slate-400 text-sm mt-2">Sederhana. Yang berat biar mesin yang kerjain.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="w-9 h-9 rounded-full bg-sky-500 flex items-center justify-center font-extrabold">1</div>
+        <div class="mt-4 font-extrabold">Isi Folder Footage</div>
+        <p class="text-slate-400 text-xs mt-2">Masukkan klip-klip produk (berbagai angle) ke folder video.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="w-9 h-9 rounded-full bg-sky-500 flex items-center justify-center font-extrabold">2</div>
+        <div class="mt-4 font-extrabold">Isi Folder Audio</div>
+        <p class="text-slate-400 text-xs mt-2">Masukkan audio narasi affiliate (bisa hasil AI VO juga).</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-7">
+        <div class="w-9 h-9 rounded-full bg-sky-500 flex items-center justify-center font-extrabold">3</div>
+        <div class="mt-4 font-extrabold">Klik Generate</div>
+        <p class="text-slate-400 text-xs mt-2">Sistem buat video sebanyak jumlah audio—urutan footage acak otomatis.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 p-5 rounded-2xl border border-slate-800 bg-slate-900/35 glass text-xs text-slate-300">
+      <div class="flex items-start gap-3">
+        <div class="text-sky-400 mt-0.5"><i class="fa-solid fa-lightbulb"></i></div>
+        <div>
+          <div class="font-bold">Pro Tip</div>
+          <div class="mt-1 text-slate-400">Mau scale lebih brutal? Pakai bonus <b class="text-slate-200">TikTok Viral Content Generator</b> untuk bikin banyak script + voice over, lalu masukkan audionya ke VIDGEN.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Replace Pricing -> CTA Join (NO PRICE SECTION) -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="rounded-3xl border border-slate-800 bg-card/70 glass p-8 sm:p-10 shadow-glow relative overflow-hidden">
+      <div class="absolute -top-24 right-0 w-[520px] h-[520px] rounded-full blur-[110px] bg-blue-600/20"></div>
+
+      <div class="relative flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800 bg-slate-900/35 glass text-[11px] text-slate-300 mb-4">
+            <i class="fa-solid fa-bell text-sky-400"></i>
+            <span><b>LAUNCH ALERT</b> — dapet info duluan</span>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-extrabold leading-tight">
+            Siap jadi yang pertama dapet akses & update VIDGEN?
+          </h2>
+          <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+            Gabung waitinglist WhatsApp Channel. Kamu bakal dapet update launch, tutorial, contoh hasil, dan promo khusus member.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-2 text-[11px] text-slate-400">
+            <span class="px-3 py-1 rounded-full border border-slate-800 bg-slate-900/35 glass"><i class="fa-solid fa-circle-check text-emerald-400"></i> Gratis</span>
+            <span class="px-3 py-1 rounded-full border border-slate-800 bg-slate-900/35 glass"><i class="fa-solid fa-bolt text-sky-400"></i> Update penting aja</span>
+            <span class="px-3 py-1 rounded-full border border-slate-800 bg-slate-900/35 glass"><i class="fa-solid fa-shield text-sky-400"></i> No spam</span>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-[360px]">
+          <div class="rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-5">
+            <div class="text-sm font-extrabold text-emerald-200">JOIN WAITINGLIST</div>
+            <div class="text-[11px] text-emerald-200/80 mt-1">Klik tombol → langsung ke WA Channel</div>
+
+            <a href="https://chat.whatsapp.com/Fu8sjkEIEtVHqwKRF8V0lI" target="_blank"
+               class="mt-4 w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-extrabold py-3 rounded-full text-sm shadow-glow">
+              <i class="fa-brands fa-whatsapp"></i>
+              JOIN VIA WHATSAPP
+            </a>
+
+            <div class="mt-3 text-[11px] text-emerald-200/80">
+              Setelah join, aktifkan notif di tab <b>Updates</b>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-extrabold">FAQ</h2>
+      <p class="text-slate-400 text-sm mt-2">Pertanyaan yang biasanya muncul sebelum join / launch.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="font-extrabold">Ini software web atau desktop?</div>
+        <p class="text-slate-400 text-xs mt-2">Produk utama adalah <b class="text-slate-200">desktop tool</b> (offline). Kamu install/jalankan di komputer sendiri.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="font-extrabold">Waitinglist itu ngapain?</div>
+        <p class="text-slate-400 text-xs mt-2">Buat dapet update launch, tutorial workflow, contoh hasil, dan promo khusus member channel.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="font-extrabold">Bonus AI itu wajib dipakai?</div>
+        <p class="text-slate-400 text-xs mt-2">Enggak. Bonus hanya untuk mempercepat produksi (script/VO/foto/review). Core value tetap VIDGEN desktop.</p>
+      </div>
+      <div class="bg-card border border-slate-800/60 rounded-2xl p-6">
+        <div class="font-extrabold">Kalau bonus AI berubah / mati gimana?</div>
+        <p class="text-slate-400 text-xs mt-2">Tidak mempengaruhi produk utama. Bonus bersifat beta dan bergantung layanan pihak ketiga.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900/60 py-10 px-4 text-center">
+    <div class="text-xl font-extrabold">Fokus Upload, Bukan Edit.</div>
+    <div class="text-slate-400 text-xs mt-2">VIDGEN bantu urusan produksi video — kamu fokus jualan & konsisten posting.</div>
+
+    <a href="https://chat.whatsapp.com/Fu8sjkEIEtVHqwKRF8V0lI" target="_blank"
+       class="inline-flex items-center justify-center gap-2 mt-6 bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-extrabold py-3 px-8 rounded-full text-sm shadow-glow">
+      <i class="fa-brands fa-whatsapp"></i>
+      Join Waitinglist WhatsApp
+    </a>
+
+    <div class="mt-8 text-[10px] text-slate-600">© 2026 VIDGEN Suite — Desktop Video Generator + Bonus AI Modules</div>
+  </footer>
+
+</body>
+</html>
